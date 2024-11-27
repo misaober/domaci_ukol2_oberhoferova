@@ -1,6 +1,6 @@
 import requests
 
-#část 1 - přidat nějakou podmínku, kdyby IČO nebylo nalezeno?
+#část 1 
 ico = input("Zadej číslené IČO subjektu, který tě zajímá:").strip()
 response = requests.get("https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/" + ico)
 vystup = response.json()
