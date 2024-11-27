@@ -18,6 +18,7 @@ headers = {
     "Content-Type": "application/json",
 }
 data = '{"obchodniJmeno": "' + nazev +'"}'
+data = data.encode("utf-8")
 response_2 = requests.post("https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/vyhledat", headers = headers, data = data)
 vystup_2 = response_2.json()
 #print(vystup_2.keys())
